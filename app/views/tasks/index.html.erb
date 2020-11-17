@@ -1,8 +1,10 @@
 <h1>Here are your tasks for today</h1>
 
-<ul>
+
 <% @tasks.each do |task|%>
-  <li><input type="checkbox" value='<%=%>'><%=link_to task.title, task_path(task)%></li>
+  <li><input type="checkbox" value='<%=%>'>
+  <%=link_to task.title, task_path(task)%>
+  <%= link_to  "Delete", task_path(task), method: :delete %>
 <%end%>
 </ul>
 

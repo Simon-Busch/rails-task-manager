@@ -1,7 +1,8 @@
-<h1>Here are your tasks for today</h1>
+<h1>Edit a task</h1>
+
 
 <%= form_for(@task) do |f| %>
-  <%=f.label :title %>
+    <%=f.label :title %>
   <%=f.text_field :title %>
   <%=f.label :details %>
   <%=f.text_field :details %>
