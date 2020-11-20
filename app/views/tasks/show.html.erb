@@ -1,7 +1,10 @@
-<h1>Let's focus on one task</h1>
 
-<%= link_to  "Edit the task", task_edit_path(@task.id) %> 
-<h2>Here is your task : <%= @task.title%></h2>
-<p>You have to do : <%= @task.details%></p>
+<div class="container">
+  <h1>Let's focus on one task</h1>
 
-<%=  link_to 'Back', tasks_path%>
+  <%= link_to  "Edit the task", task_edit_path(@task.id), class:"btn btn-danger" %> 
+  <h2>Here is your task : <%= @task.title%></h2>
+  <p>You have to do : <%= @task.details%></p>
+
+  <%=  link_to 'Back', tasks_path, class:"btn btn-warning"%>
+</div>

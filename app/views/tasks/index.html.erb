@@ -1,13 +1,19 @@
-<h1>Here are your tasks for today</h1>
+<div class="container">
 
+  <h1>Here are your tasks for today</h1>
 
-<% @tasks.each do |task|%>
-  <li><input type="checkbox" value='<%=%>'>
-  <%=link_to task.title, task_path(task)%>
-  <%= link_to  "Delete", task_path(task), method: :delete %>
-<%end%>
-</ul>
+  <div class="container">
+    <div class="row">
+      <ul class="list">
+      <% @tasks.each do |task|%>
+        <li class="list-li">
+        <%=link_to task.title, task_path(task), class:"link"%>
+        <%= link_to  "Delete", task_path(task), method: :delete, class:"btn btn-danger" %>
+      <%end%>
+      </ul>
+    </div>
+  </div>
+  <h3>Dow you want to create a new task ?</h3>
 
-<h3>Dow you want to create a new task ?</h3>
-
-<%= link_to  "Create a new task bro 🚀", tasks_new_path %>
+  <%= link_to  "Create a new task bro 🚀", tasks_new_path, class:"btn btn-primary"%>
+</div>
